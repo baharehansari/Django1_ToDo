@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>ورود</title>
+{% endblock %}
+
+{% block content %}
+    <form action='' method='POST' novalidate>
+        {% csrf_token %}
+        <h3>{{ form.as_p }}</h3>
+        <input class='btn btn-secondary' type='submit' value='ورود'>
+    </form>
+    {% if messages %}
+        {% for msg in messages %}
+            <h1>{{ msg }}</h1>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'register' %}" class='btn btn-secondary'>ثبت نام</a> 
+{% endblock %}
+

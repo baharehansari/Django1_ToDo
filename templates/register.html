@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>ثبت نام</title>
+{% endblock %}
+
+{% block content %}
+<h2>ثبت نام:</h2>
+    <form action='' method='POST' novalidate>
+        {% csrf_token %}
+        <h3>{{ form.as_p }}</h3>
+        <input class='btn btn-secondary' type='submit' value='ثبت نام'>
+    </form> 
+{% endblock %}
+

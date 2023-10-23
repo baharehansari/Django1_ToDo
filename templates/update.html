@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2>آپدیت:</h2>
+    <form action='' method='POST' novalidate>
+        {% csrf_token %}
+        <h3>{{ form.as_p }}</h3>
+        <input class='btn btn-secondary' type='submit' value='آپدیت'>
+        <a href="{% url 'hello' %}" class='btn btn-info'>خانه</a>
+    </form>
+{% endblock %}

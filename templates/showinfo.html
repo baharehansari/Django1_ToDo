@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>آی دی: {{ p.id }}</h2>
+    <h2>موضوع: {{ p.title }}</h2>
+    <p>جزئیات: {{ p.body }}</p>
+    <p>تاریخ: {{ p.dateCreate }}</p>
+    <a href="{% url 'hello' %}" class='btn btn-primary'>بازگشت</a>           
+{% endblock %}
